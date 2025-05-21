@@ -1,0 +1,228 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blog Posts - Bhoumish's Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        light: '#e0e0e0',
+                        'accent-blue': '#0ea5e9',
+                        'accent-rose': '#f43f5e',
+                        'accent-emerald': '#10b981',
+                        'accent-amber': '#f59e0b',
+                        'accent-violet': '#8b5cf6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom animations and effects */
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #8b5cf6;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+        
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light font-sans flex-grow">
+    <!-- Header Section -->
+    <header class="pt-32 pb-16 px-4">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">All Blog Posts</h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Explore our latest insights, guides, and stories.</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent-blue via-accent-violet to-accent-rose mx-auto"></div>
+        </div>
+    </header>
+    
+    <!-- Blog Cards Grid -->
+    <section class="px-4 pb-20">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Blog Card 1 - Technology -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-blue transition-all duration-300">
+                    <div class="h-2 bg-accent-blue"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-blue/20 text-accent-blue mb-4">Technology</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-blue transition-colors">The Future of Web Development</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">Exploring the latest trends and technologies shaping the future of web development and design. From AI-powered tools to WebAssembly and beyond.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>May 15, 2025</span>
+                            <span>Bhoumish Grover</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Blog Card 2 - Design -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-rose transition-all duration-300">
+                    <div class="h-2 bg-accent-rose"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-rose/20 text-accent-rose mb-4">Design</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-rose transition-colors">Color Theory for Digital Designers</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">Understanding how colors work together and influence user perception in digital interfaces. A comprehensive guide to color psychology.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>May 10, 2025</span>
+                            <span>Aisha Johnson</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Blog Card 3 - Productivity -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-emerald transition-all duration-300">
+                    <div class="h-2 bg-accent-emerald"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-emerald/20 text-accent-emerald mb-4">Productivity</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-emerald transition-colors">Building a Second Brain</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">A systematic approach to capturing, organizing, and sharing your digital knowledge. Learn how to create a personal knowledge management system.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>May 5, 2025</span>
+                            <span>Marcus Chen</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Blog Card 4 - Travel -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-amber transition-all duration-300">
+                    <div class="h-2 bg-accent-amber"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-amber/20 text-accent-amber mb-4">Travel</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-amber transition-colors">Hidden Gems of Southeast Asia</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">Discovering lesser-known destinations that offer authentic cultural experiences away from tourist crowds. A traveler's guide to unique experiences.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>April 28, 2025</span>
+                            <span>Elena Rodriguez</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Blog Card 5 - AI -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-violet transition-all duration-300">
+                    <div class="h-2 bg-accent-violet"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-violet/20 text-accent-violet mb-4">AI</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-violet transition-colors">Practical Applications of Machine Learning</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">How businesses are leveraging AI and machine learning to solve real-world problems. Case studies and implementation strategies.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>April 22, 2025</span>
+                            <span>Bhoumish Kumar</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Blog Card 6 - Lifestyle -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-blue transition-all duration-300">
+                    <div class="h-2 bg-accent-blue"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-blue/20 text-accent-blue mb-4">Lifestyle</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-blue transition-colors">Mindfulness in the Digital Age</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">How to maintain focus and mental clarity in an increasingly connected and distracted world. Practical techniques for digital well-being.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>April 15, 2025</span>
+                            <span>Sarah Williams</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Blog Card 7 - Development -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-rose transition-all duration-300">
+                    <div class="h-2 bg-accent-rose"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-rose/20 text-accent-rose mb-4">Development</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-rose transition-colors">Mastering CSS Grid Layout</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">A comprehensive guide to creating complex, responsive layouts with CSS Grid. Learn advanced techniques and best practices.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>April 10, 2025</span>
+                            <span>Bhoumish Kumar</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Blog Card 8 - Security -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-emerald transition-all duration-300">
+                    <div class="h-2 bg-accent-emerald"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-emerald/20 text-accent-emerald mb-4">Security</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-emerald transition-colors">Web Security Best Practices</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">Essential security measures every web developer should implement. Protect your applications from common vulnerabilities and threats.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>April 5, 2025</span>
+                            <span>David Thompson</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Blog Card 9 - Career -->
+                <a href="blog-post.html" class="group block bg-gray-900/50 rounded-xl overflow-hidden card-hover border border-gray-800 hover:border-accent-amber transition-all duration-300">
+                    <div class="h-2 bg-accent-amber"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-amber/20 text-accent-amber mb-4">Career</span>
+                        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-accent-amber transition-colors">Transitioning to a Tech Career</h2>
+                        <p class="text-gray-400 line-clamp-3 mb-4">A step-by-step guide for professionals looking to switch to a career in technology. Resources, strategies, and personal stories.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>March 30, 2025</span>
+                            <span>Priya Sharma</span>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pagination -->
+    <section class="px-4 pb-20">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="flex justify-center items-center space-x-2">
+                <a href="#" class="px-4 py-2 border border-gray-700 rounded-md text-gray-400 hover:bg-gray-800 hover:text-white transition">Previous</a>
+                <a href="#" class="px-4 py-2 bg-accent-violet text-white rounded-md">1</a>
+                <a href="#" class="px-4 py-2 border border-gray-700 rounded-md text-gray-400 hover:bg-gray-800 hover:text-white transition">2</a>
+                <a href="#" class="px-4 py-2 border border-gray-700 rounded-md text-gray-400 hover:bg-gray-800 hover:text-white transition">3</a>
+                <a href="#" class="px-4 py-2 border border-gray-700 rounded-md text-gray-400 hover:bg-gray-800 hover:text-white transition">Next</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<%- include("partials/footer.ejs") %>

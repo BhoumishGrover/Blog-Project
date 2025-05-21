@@ -14,7 +14,10 @@ app.listen(port,()=>{
     console.log(`Server started on port ${port}`);
 });
 
-app.get("/",(re,res)=>{
-    res.sendFile(__dirname + "/views/index.ejs");
+app.get("/",(req,res)=>{
+    res.render(__dirname + "/views/index.ejs");
 });
 
+app.get("/archive",(req,res)=>{
+    res.render(__dirname + "/views/archive.ejs");
+});

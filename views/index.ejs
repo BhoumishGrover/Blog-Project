@@ -1,0 +1,125 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoumish's Blog</title>
+</head>
+<body class="bg-dark text-light font-sans min-h-screen flex flex-col">
+    <!-- Hero Section -->
+    <section class=" flex-grow pt-32 pb-20 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-accent-blue via-accent-purple to-accent-pink bg-clip-text text-transparent py-4">Thoughts, Stories & Ideas</h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">A collection of insights and inspirations from curious minds.</p>
+            <a href="/archive" class="inline-block px-8 py-4 bg-accent-blue hover:bg-accent-blue/80 text-white font-medium rounded-lg 
+            transition-all duration-300 button-glow">Explore Articles</a>
+        </div>
+    </section>
+
+    <!-- Recent Posts Preview -->
+    <section class="py-16 px-4 bg-gray-900/50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Recent Posts</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <article class="bg-gray-800/50 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-blue text-white mb-4">Technology</span>
+                        <h3 class="text-xl font-semibold mb-2 hover:text-accent-blue transition">The Future of Web Development</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-2">Exploring the latest trends and technologies shaping the future of web development and design.</p>
+                        <time class="text-sm text-gray-500">May 15, 2025</time>
+                    </div>
+                </article>
+                
+                <!-- Post 2 -->
+                <article class="bg-gray-800/50 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-green text-white mb-4">Lifestyle</span>
+                        <h3 class="text-xl font-semibold mb-2 hover:text-accent-green transition">Mindfulness in the Digital Age</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-2">How to maintain focus and mental clarity in an increasingly connected and distracted world.</p>
+                        <time class="text-sm text-gray-500">May 10, 2025</time>
+                    </div>
+                </article>
+                
+                <!-- Post 3 -->
+                <article class="bg-gray-800/50 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-purple text-white mb-4">Travel</span>
+                        <h3 class="text-xl font-semibold mb-2 hover:text-accent-purple transition">Hidden Gems of Southeast Asia</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-2">Discovering lesser-known destinations that offer authentic cultural experiences away from tourist crowds.</p>
+                        <time class="text-sm text-gray-500">May 5, 2025</time>
+                    </div>
+                </article>
+                
+                <!-- Post 4 -->
+                <article class="bg-gray-800/50 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-pink text-white mb-4">Design</span>
+                        <h3 class="text-xl font-semibold mb-2 hover:text-accent-pink transition">Color Theory for Digital Designers</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-2">Understanding how colors work together and influence user perception in digital interfaces.</p>
+                        <time class="text-sm text-gray-500">April 28, 2025</time>
+                    </div>
+                </article>
+                
+                <!-- Post 5 -->
+                <article class="bg-gray-800/50 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-blue text-white mb-4">AI</span>
+                        <h3 class="text-xl font-semibold mb-2 hover:text-accent-blue transition">Practical Applications of Machine Learning</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-2">How businesses are leveraging AI and machine learning to solve real-world problems.</p>
+                        <time class="text-sm text-gray-500">April 22, 2025</time>
+                    </div>
+                </article>
+                
+                <!-- Post 6 -->
+                <article class="bg-gray-800/50 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-accent-green text-white mb-4">Productivity</span>
+                        <h3 class="text-xl font-semibold mb-2 hover:text-accent-green transition">Building a Second Brain</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-2">A systematic approach to capturing, organizing, and sharing your digital knowledge.</p>
+                        <time class="text-sm text-gray-500">April 15, 2025</time>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-6 py-3 border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-white rounded-lg transition-all duration-300">View All Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl bg-gray-800/30 p-8 md:p-12 rounded-2xl border border-gray-700">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold mb-2">Stay Updated</h2>
+                    <p class="text-gray-400">Get the latest articles and insights delivered straight to your inbox.</p>
+                </div>
+                
+                <div class="md:w-1/2 w-full">
+                    <form class="flex flex-col sm:flex-row gap-3">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            class="flex-grow px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-blue input-glow text-white"
+                            required
+                        >
+                        <button 
+                            type="submit" 
+                            class="px-6 py-3 bg-accent-green hover:bg-accent-green/80 text-white font-medium rounded-lg transition-all duration-300 button-glow"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
+                    <p class="text-xs text-gray-500 mt-2">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<%- include("partials/footer.ejs") %>
